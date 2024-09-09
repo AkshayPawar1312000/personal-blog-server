@@ -19,6 +19,11 @@ app.use(
 );
 app.use(cookieParser());
 
+app.get("/", (req, res) => {
+  res.send(`<h3>Personal Blog node application is running...</h3>`);
+  res.end();
+});
+
 //Routes
 app.use("/", require("./routes/personalBolgs"));
 app.use("/", require("./routes/userRoutes"));
